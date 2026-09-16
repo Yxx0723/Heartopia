@@ -1,0 +1,31 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "heartopia-bot"
+version = "0.1.0"
+description = "Screen-based Heartopia resource collection MVP"
+requires-python = ">=3.11"
+dependencies = [
+    "opencv-python",
+    "numpy",
+    "mss",
+    "PyYAML",
+    "loguru",
+    "pywin32; sys_platform == 'win32'",
+    "pydirectinput; sys_platform == 'win32'",
+]
+
+[project.scripts]
+heartopia-bot = "main:main"
+
+[tool.setuptools]
+py-modules = ["main"]
+
+[tool.setuptools.packages.find]
+include = ["actions*", "capture*", "core*", "debug*", "navigation*", "vision*", "tools*"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+addopts = "-q"

@@ -1,0 +1,6 @@
+# 单资源配置示例；当前 OpenCV detector 仍只处理一种资源类型。
+resources:
+  wood:
+    enabled: true
+    priority: 1.0
+    confidence_threshold: 0.70

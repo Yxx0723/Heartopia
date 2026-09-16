@@ -1,0 +1,14 @@
+.venv/
+__pycache__/
+*.py[cod]
+.pytest_cache/
+
+# 运行时生成内容
+logs/*.log
+debug/failures/*
+debug/invalid_samples/*
+dataset/images/*
+dataset/labels/*
+
+# 保留空目录占位文件
+!.gitkeep

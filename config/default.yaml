@@ -1,0 +1,73 @@
+window:
+  title_contains: "心动小镇"
+
+capture:
+  fps: 10
+
+control:
+  dry_run: true
+
+controls:
+  forward: "w"
+  backward: "s"
+  left: "a"
+  right: "d"
+  interact: "f"
+
+vision:
+  detector: "mock"
+  confidence_threshold: 0.70
+  center_deadzone: 0.06
+  resource_type: "wood"
+  resource_template_paths: []
+  prompt_template_paths: []
+  prompt_threshold: 0.80
+
+steering:
+  kp: 0.25
+  max_mouse_dx: 100
+
+motion:
+  motion_threshold: 0.01
+  stuck_after_seconds: 2.0
+
+navigation:
+  approach_step_ms: 150
+  target_timeout_seconds: 8
+  lost_target_frames: 5
+
+interaction:
+  retry_count: 2
+
+ui:
+  inventory_full_template_paths: []
+  abnormal_template_paths: []
+  inventory_threshold: 0.85
+  abnormal_threshold: 0.85
+  roi: [0.0, 0.0, 1.0, 1.0]
+
+recovery:
+  max_attempts: 3
+
+route:
+  path: "config/routes/test_route.yaml"
+
+safety:
+  pause_when_unfocused: true
+  max_runtime_minutes: 60
+
+hotkeys:
+  screenshot: F6
+  pause: F8
+  resume: F9
+  stop: F10
+
+debug:
+  overlay: true
+  save_failed_targets: true
+  record_frames: false
+  record_interval_seconds: 1.0
+  screenshot_dir: "dataset/images"
+  failure_dir: "debug/failures"
+  log_dir: "logs"
+  log_level: "INFO"
